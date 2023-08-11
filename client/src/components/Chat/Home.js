@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Home = ({ socket }) => {
+  const placeholder = "Enter Username";
+
   const navigate = useNavigate();
   const [userName, setUserName] = useState("");
 
@@ -13,10 +15,18 @@ const Home = ({ socket }) => {
   };
   return (
     <form className="home__container" onSubmit={handleSubmit}>
+      <img
+        src={require("../Landing/duckwalk.gif")}
+        alt="duckWalking"
+        height={200}
+        width={250}
+      ></img>
+
       <h2 className="home__header">Sign in to Open Chat</h2>
-      <label htmlFor="username">Username</label>
+
       <input
         type="text"
+        placeholder={placeholder}
         minLength={6}
         name="username"
         id="username"

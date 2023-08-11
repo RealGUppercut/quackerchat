@@ -7,6 +7,8 @@ import Contact from "./components/Contact/Contact";
 import Home from "./components/Chat/Home";
 import socketIO from "socket.io-client";
 import ChatPage from "./components/Chat/ChatPage";
+import "./App.css";
+import logo from "../src/components/Landing/quackhead.png";
 
 const socket = socketIO.connect("http://localhost:4000");
 
@@ -15,12 +17,7 @@ function App() {
     <BrowserRouter>
       <Nav>
         <Link to="/">
-          <img
-            src="https://i.guim.co.uk/img/media/a5fb31e646d2677f9d44104a3b26ee42955f0acc/0_170_5100_3059/master/5100.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=aa3e8bddfcc681ae45c2d642734ccdbc"
-            alt="LOGO"
-            height={75}
-            width={100}
-          ></img>
+          <img src={logo} alt="LOGO" height={50} width={50}></img>
         </Link>
         <Link to="/">Home</Link>
         <Link to="About">About</Link>
